@@ -32,8 +32,12 @@ class Voxel(Button):
     def input(self,key):
         if self.hovered:
             if key == 'left mouse down':
-                
-                voxel = Voxel(position = self.position + mouse.normal, texture= stone_texture)
+                if block_pick == 1: voxel = Voxel(position = self.position + mouse.normal, texture = grass_texture)
+                if block_pick == 2: voxel = Voxel(position = self.position + mouse.normal, texture = stone_texture)
+                if block_pick == 3: voxel = Voxel(position = self.position + mouse.normal, texture = brick_texture)
+                if block_pick == 4: voxel = Voxel(position = self.position + mouse.normal, texture = dirt_texture)
+
+              
             if key == 'right mouse down':
                 destroy(self)
 
