@@ -10,6 +10,7 @@ block_pick = 1
 
 def update():
      global block_pick
+
      if held_keys['1']: block_pick = 1
      if held_keys['2']: block_pick = 2
      if held_keys['3']: block_pick = 3
@@ -31,6 +32,7 @@ class Voxel(Button):
     def input(self,key):
         if self.hovered:
             if key == 'left mouse down':
+                
                 voxel = Voxel(position = self.position + mouse.normal, texture= stone_texture)
             if key == 'right mouse down':
                 destroy(self)
