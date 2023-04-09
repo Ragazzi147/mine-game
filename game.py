@@ -79,8 +79,8 @@ class Hand(Entity):
         self.position = Vec2(0.4,-0.6)  
                
 
-for z in range(20):
-    for x in range (20):
+for z in range(30):
+    for x in range (30):
         
             voxel = Voxel((x,0,z))
 
